@@ -23,7 +23,7 @@ This step should take a while (AWS will setup EC2 instances)
 ### Build + deploy
 ```bash
 ./gradlew deployStaging
-``
+```
 
 ### Cleaning up
 
