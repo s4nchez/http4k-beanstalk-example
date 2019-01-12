@@ -20,7 +20,18 @@ aws elasticbeanstalk create-environment --application-name http4-beanstalk-examp
 
 This step should take a while (AWS will setup EC2 instances)
 
-Deploy:
+### Build + deploy
 ```bash
 ./gradlew deployStaging
 ``
+
+### Cleaning up
+
+Beanstalk runs continously on EC2, and you'll have to pay while it's running.
+
+To delete the resources from this example, use:
+
+```bash
+aws elasticbeanstalk terminate-environment --environment-name staging
+aws elasticbeanstalk delete-application --application-name http4-beanstalk-example
+```
